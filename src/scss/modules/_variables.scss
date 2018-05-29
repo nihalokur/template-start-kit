@@ -1,0 +1,57 @@
+$white: #ffffff;
+$midnight-blue: #003366;
+$wafer: #e1d7d2;
+$venus: #998099;
+$nebula: #d2e1dd;
+$hopbush: #cc6699;
+$pink: #eca0ba;
+$purple: #524c84;
+$yellow: #fff9af;
+$orange: #fda42a;
+
+$color-primary: $midnight-blue;
+$color-primary-dark: $midnight-blue;
+
+$color-accent: $pink;
+
+$color-secondary: $midnight-blue; 
+$color-secondary-dark: $midnight-blue;
+
+$color-text: $orange;
+$color-text-weak: $venus;
+$color-text-strong: $venus;
+$color-text-error: $venus;
+
+$color-placeholder: $purple;
+
+$color-border: $purple; 
+$color-border-dark: $purple; 
+$color-border-light: $purple;
+
+$color-background: $purple;
+$color-background-shade: $purple;
+$color-background-invert: $purple;
+
+$font-family: 'Lato', sans-serif;
+$font-types: ('regular', 'bold', 'bolditalic', 'italic');
+
+$text-huge: 2.125em;
+$text-biggest: 1.9em;
+$text-bigger: 1.25em;
+$text-big: 1.1em;
+$text-medium: 1em;
+$text-small: .95em;
+$text-xsmall: .85em;
+
+$body-font-size: 16px;
+$body-font-size-xxl: 18px;
+$input-border-radius: 8px;
+
+$body-height: 100vh;
+$header-height: 3.75rem;
+
+$padding-std: 1rem;
+
+// padding margin
+$space-amounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50);
+$sides: (top, bottom, left, right);

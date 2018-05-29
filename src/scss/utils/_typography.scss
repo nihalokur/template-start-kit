@@ -1,0 +1,53 @@
+
+
+// font-face($font-family, $file-path, $localName, $weight: normal, $style: normal, $asset-pipeline: true, $format)
+@include font-face('Lato', '../fonts/Lato-Regular', 'Lato', 400, normal, 'woff2', 'woff2');
+@include font-face('Lato', '../fonts/Lato-Bold', 'Lato', 700, normal, 'woff2', 'woff2');
+@include font-face('Lato', '../fonts/Lato-BoldItalic', 'Lato', 700, italic, 'woff2', 'woff2');
+@include font-face('Lato', '../fonts/Lato-Italic', 'Lato', 400, italic, 'woff2', 'woff2');
+
+@each $font-type in $font-types {
+  $weight: 400;
+  $style: normal;
+
+  @if(str-index($font-type,'bold')) {  
+    $weight: 700;
+  } 
+
+  @if(str-index($font-type,'italic')) {  
+    $style: italic;
+  } 
+
+  .font-#{$font-type} {
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+.text-huge {
+  font-size: $text-huge;
+}
+
+.text-biggest, h1 {
+  font-size: $text-biggest;
+}
+
+.text-bigger, h2 {
+  font-size: $text-bigger;
+}
+
+.text-big, h3 {
+  font-size: $text-big;
+}
+
+.text-medium, h4 {
+  font-size: $text-medium;
+}
+
+.text-small, h5{
+  font-size: $text-small;
+}
+
+.text-xsmall, h6 {
+  font-size: $text-xsmall;
+}

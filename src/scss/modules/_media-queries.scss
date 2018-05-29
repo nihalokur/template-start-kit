@@ -1,0 +1,56 @@
+
+//media queries
+$break-xs: 578px;
+$break-sm: 579px;
+$break-md: 769px;
+$break-lg: 993px;
+$break-xl: 1201px;
+$break-xxl: 1367px;
+$break-fhd: 1679px;
+$break-qhd: 1919px;
+$break-max-sm: 576px;
+$break-max-md: 769px;
+$break-max-lg: 992px;
+$break-max-xl: 1200px;
+
+// height media
+$break-height-xs:300px;
+$break-height-sm:500px;
+
+@mixin media($media) {
+    @if $media==$break-xs {
+        @media (max-width: $break-xs) {
+            @content;
+        }
+    }
+    @else if $media==$break-sm {
+        @media (min-width: $break-sm) {
+            @content;
+        }
+    }
+    @else if $media==$break-md {
+        @media (min-width: $break-md) {
+            @content;
+        }
+    }
+    @else if $media==$break-lg {
+        @media (min-width: $break-lg) {
+            @content;
+        }
+    }
+    @else if $media==$break-xl {
+        @media (min-width: $break-xl) {
+            @content;
+        }
+    }
+    @else if $media==$break-height-xs {
+        @media (max-height: $break-height-xs) {
+            @content;
+        }
+    }
+    @else if $media==$break-height-sm {
+        @media (max-height: $break-height-sm) {
+            @content;
+        }
+    }
+}

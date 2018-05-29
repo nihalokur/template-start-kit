@@ -1,0 +1,82 @@
+@mixin box-shadow($val: 0 1px 1px, $c: rgba(0, 0, 0, 0.18) ) {
+    box-shadow: $val $c;
+}
+
+@mixin box-shadow-stroke {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+}
+
+@mixin text-shadow {
+    text-shadow: 0 0 5px rgba(0, 0,0, 0.5);
+}
+
+@mixin transition($val) {
+    transition: $val;
+}
+
+@mixin border-radius($t: 3px,$r: 3px, $b: 3px, $l: 3px) {
+    border-radius: $t $r $b $l;
+}
+
+@mixin svg($url, $name, $gradient: linear-gradient(transparent, transparent)) {
+    background: url($url+$name + '.png');
+    background: url($url+$name + '.svg'), $gradient;
+}
+
+@mixin only-ie {
+    @media screen and (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+      @content;
+    }
+}
+
+@mixin scrollbar {
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: $color-secondary-light;
+        border: 3px solid $color-secondary-dark;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+@mixin font-face($font-family, $file-path, $localName, $weight: normal, $style: normal, $asset-pipeline: true, $format:'truetype'){
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+   
+        @if $asset-pipeline == true {
+          src: font-url('#{$file-path}.eot');
+          src: local($localName)
+               font-url('#{$file-path}.eot?#iefix')          format('embedded-opentype'),
+               font-url('#{$file-path}.woff')                format('woff'),
+               font-url('#{$file-path}.ttf')                 format('truetype'),
+               font-url('#{$file-path}.svg##{$font-family}') format('svg');
+        } @else {
+          src: local($localName), url($file-path + '.' + $asset-pipeline)       format($format),
+        }
+    }
+}
+
+@mixin font($font-type) {
+    $weight: 400;
+    $style: normal;
+
+    @if(str-index($font-type,'bold')) {  
+        $weight: 700;
+    } 
+
+    @if(str-index($font-type,'italic')) {  
+        $style: italic;
+    }
+
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+}

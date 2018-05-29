@@ -1,0 +1,33 @@
+html {
+  min-height: 100%;
+  background-color: $color-background;
+  font-size: $body-font-size;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  @include media($break-xxl) {
+    font-size: $body-font-size-xxl;
+  }
+}
+
+body {
+  line-height: 1.4;
+  color: $color-text;
+  min-height: $body-height;
+  text-rendering: optimizeLegibility;
+  fill: currentColor;
+  @include font('regular');
+}
+
+html,
+body,
+.container {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 auto;
+  overflow: auto;
+
+  @include media($break-md) {
+    height: 100%;
+  }
+}

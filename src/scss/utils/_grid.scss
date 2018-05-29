@@ -1,0 +1,8 @@
+.col-6 {
+  flex-basis: 1;
+  max-width: 100%;
+  @include media($break-md) {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
